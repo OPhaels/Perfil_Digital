@@ -1,0 +1,174 @@
+:root {
+  --primary: #1a1ab6;
+  --secondary: #3ab678;
+  --bg: #374677;
+  --text: #19191f;
+  --subtext: #4b4e55;
+  --card-bg: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(
+    circle at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.384) 100%
+  );
+}
+
+.profile-container {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--card-bg);
+  padding: 30px;
+  text-shadow: 0 0 1px black;
+  margin: 0;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--subtext);
+  margin-bottom: 16px;
+}
+
+.bio {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.skills {
+  margin: 30px 0;
+}
+
+.skills span {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px 8px 0;
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background-color: #248c68;
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 20px;
+  }
+}
+
+.bar {
+  background: var(--card-bg);
+  color: black;
+  text-shadow: 0 0 1px black;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.img1 {
+  display: flex;
+}
+
+.boxe {
+  position: relative;
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.boxe img {
+  width: 350px;
+  height: 200px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px black;
+  transition: all 0.5s ease-in-out;
+}
+
+.boxe .nome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20pt;
+  font-family: "Trebuchet MS", sans-serif;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  text-shadow: 0 0 10px black;
+}
+
+.boxe:hover .nome {
+  opacity: 1;
+}
+
+.boxe:hover img {
+  filter: grayscale(10%);
+  box-shadow: 0 0 15px 5px black;
+  transform: scale(1.03);
+  cursor: pointer;
+}
