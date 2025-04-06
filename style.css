@@ -128,20 +128,25 @@ h2 {
   margin: 20px;
 }
 
+/* ✅ RESPONSIVO */
 .img1 {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .boxe {
   position: relative;
   margin: 15px;
+  width: 90vw;
+  max-width: 350px;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .boxe img {
-  width: 350px;
-  height: 200px;
+  width: 100%;
+  height: auto;
   filter: grayscale(100%);
   opacity: 0.8;
   border-radius: 5px;
@@ -171,4 +176,11 @@ h2 {
   box-shadow: 0 0 15px 5px black;
   transform: scale(1.03);
   cursor: pointer;
+}
+
+/* ✅ MEDIA QUERY EXTRA (ajuste fino em telas pequenas) */
+@media (max-width: 768px) {
+  .boxe .nome {
+    font-size: 16pt;
+  }
 }
