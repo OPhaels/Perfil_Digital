@@ -1,7 +1,7 @@
 :root {
-  --primary: #1a1ab6;
+  --primary: #3f62d3;
   --secondary: #79d7be;
-  --bg: #2e5077;
+  --bg: #275e9c;
   --text: #19191f;
   --subtext: #4b4e55;
   --card-bg: #f6f4f0;
@@ -40,7 +40,7 @@ body::before {
 }
 
 .profile-container {
-  max-width: 700px;
+  max-width: 650px;
   width: 100%;
   text-align: center;
   background-color: var(--card-bg);
@@ -147,9 +147,9 @@ h2 {
 
 .boxe {
   position: relative;
-  margin: 5px;
-  width: 90vw;
-  max-width: 350px;
+  margin: 0px 25px;
+  width: 80vw;
+  max-width: 300px;
   overflow: hidden;
 }
 
