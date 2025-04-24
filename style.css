@@ -43,7 +43,7 @@ body::before {
 
 /* PROFILE */
 .profile-container {
-  max-width: 650px;
+  max-width: 600px;
   width: 100%;
   text-align: center;
   background-color: var(--card-bg);
@@ -55,8 +55,8 @@ body::before {
 }
 
 .profile-pic {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
@@ -104,8 +104,9 @@ h2 {
 span {
   margin: 10px;
 }
-.skills .hb {
-  width: 70%;
+.skills .hb,
+.skills .idio {
+  width: 320px;
   display: inline-block;
   background: var(--primary);
   color: white;
@@ -117,15 +118,6 @@ span {
 h3 {
   font-weight: bold;
   text-shadow: 2px 2px 5px black;
-}
-.skills .idio {
-  width: 70%;
-  background: rgba(20, 80, 209, 0.637);
-  display: inline-block;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 14px;
 }
 
 /* CALL TO ACTION BUTTONS */
@@ -214,10 +206,32 @@ span img {
   filter: brightness(1) contrast(1) drop-shadow(0 0 2px black);
 }
 
-/* MEDIA QUERIES */
+.hb span,
+.idio span {
+  display: inline-block;
+  margin: 10px;
+}
+
+.hb img,
+.idio img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.hb img:hover,
+.idio img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   .boxe .nome {
     font-size: 16pt;
+  }
+  .skills .hb,
+  .skills .idio {
+    width: 250px;
   }
 
   h1 {
@@ -230,8 +244,8 @@ span img {
 
   .skills span {
     font-size: 12px;
-    padding: 10px;
-    margin: 3px;
+    padding: 5px 0px;
+    margin: 5px;
   }
 }
 
@@ -240,8 +254,13 @@ span img {
     padding: 10px;
   }
 
+  .skills .hb,
+  .skills .idio {
+    width: 250px;
+  }
+
   .cta-buttons a {
-    padding: 10px;
+    padding: 15px 5px;
     font-size: 13px;
   }
 
@@ -251,7 +270,7 @@ span img {
   }
 
   h1 {
-    margin: 0px 20px;
+    margin: 0 20px;
   }
 }
 
@@ -274,32 +293,47 @@ span img {
     padding: 5px;
     font-size: 5pt;
   }
+
   h3 {
     font-size: 17pt;
   }
 }
 
 @media (max-width: 410px) {
-  span img {
+  .hb img,
+  .idio img {
     width: 24px;
     height: 24px;
+  }
+
+  .skills .hb,
+  .skills .idio {
+    width: 70%;
   }
 
   .bar {
     text-align: center;
   }
-  .cta-buttons a {
-    width: 80%;
-    background: blue;
+
+  .bio {
+    font-size: 10pt;
   }
+
+  h1 {
+    font-size: 20pt;
+  }
+  .cta-buttons a {
+    width: 65%;
+  }
+
   .social-links {
-    margin: 0px 20px;
+    margin: 0 20px;
   }
 }
 
 @media (max-width: 360px) {
   .skills .hb {
-    padding: 5;
+    padding: 5px;
     margin: 0;
   }
 }
