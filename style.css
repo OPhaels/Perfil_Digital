@@ -1,7 +1,6 @@
 :root {
-  --primary: #3f62d3;
+  --primary: #32649c;
   --secondary: #79d7be;
-  --bg: #326299;
   --text: #19191f;
   --subtext: #4b4e55;
   --card-bg: #f6f4f0;
@@ -15,7 +14,7 @@
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--primary);
   color: var(--text);
   display: flex;
   flex-direction: column;
