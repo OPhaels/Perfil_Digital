@@ -1,5 +1,5 @@
 :root {
-  --primary: #32649c;
+  --primary: #132d4b;
   --secondary: #79d7be;
   --text: #19191f;
   --subtext: #4b4e55;
@@ -199,10 +199,11 @@ h3 {
 
 /* ÍCONES */
 span img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
-  filter: brightness(1) contrast(1) drop-shadow(0 0 2px black);
+  filter: brightness(1) contrast(1)
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.308));
 }
 
 .hb span,
