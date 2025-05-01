@@ -1,6 +1,6 @@
 :root {
-  --primary: #132d4b;
-  --secondary: #79d7be;
+  --primary: #1a3f69;
+  --secondary: #5ae0bd;
   --text: #19191f;
   --subtext: #4b4e55;
   --card-bg: #f6f4f0;
@@ -83,18 +83,6 @@ h2 {
   margin: 20px auto;
 }
 
-/* LINKS */
-.social-links a {
-  padding: 5px;
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.social-links a:hover {
-  text-decoration: underline 2px;
-}
-
 /* SKILLS */
 .skills {
   margin: 20px 0;
@@ -120,7 +108,8 @@ h3 {
 }
 
 /* CALL TO ACTION BUTTONS */
-.cta-buttons a {
+.cta-buttons a,
+.social-links a {
   display: inline-block;
   margin: 0 0 20px 0;
   padding: 15px;
@@ -134,7 +123,8 @@ h3 {
   word-break: break-word;
 }
 
-.cta-buttons a:hover {
+.cta-buttons a:hover,
+.social-links a:hover {
   background-color: #248c68;
 }
 
@@ -203,7 +193,7 @@ span img {
   height: 40px;
   border-radius: 5px;
   filter: brightness(1) contrast(1)
-    drop-shadow(0 0 6px rgba(255, 255, 255, 0.308));
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.123));
 }
 
 .hb span,
@@ -214,8 +204,8 @@ span img {
 
 .hb img,
 .idio img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   transition: transform 0.3s ease;
 }
 
@@ -260,7 +250,8 @@ span img {
   }
 
   .cta-buttons a {
-    padding: 15px 5px;
+    padding: 15px 10px;
+    margin: 10px;
     font-size: 13px;
   }
 
@@ -285,7 +276,6 @@ span img {
   }
 
   span img {
-    margin: 2px;
     padding: 0;
   }
 
@@ -308,7 +298,7 @@ span img {
 
   .skills .hb,
   .skills .idio {
-    width: 70%;
+    width: 80%;
   }
 
   .bar {
@@ -317,13 +307,14 @@ span img {
 
   .bio {
     font-size: 10pt;
+    margin: 10px auto;
   }
 
   h1 {
     font-size: 20pt;
   }
   .cta-buttons a {
-    width: 65%;
+    width: 80%;
   }
 
   .social-links {
