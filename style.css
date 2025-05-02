@@ -73,7 +73,7 @@ h1 {
 h2 {
   font-size: 18px;
   color: var(--subtext);
-  margin: 10px 0px;
+  margin: 5px;
 }
 
 .bio {
@@ -272,7 +272,7 @@ span img {
   }
 
   .boxe .nome {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 
   span img {
@@ -285,7 +285,11 @@ span img {
   }
 
   h3 {
-    font-size: 17pt;
+    font-size: 14pt;
+  }
+  .bio {
+    font-size: 11pt;
+    margin: 10px auto;
   }
 }
 
