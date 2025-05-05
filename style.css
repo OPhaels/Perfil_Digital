@@ -1,6 +1,6 @@
 :root {
-  --primary: #1a3f69;
-  --secondary: rgba(24, 72, 126, 0.788);
+  --primary: #0b2447;
+  --secondary: #19366dde;
   --text: #19191f;
   --subtext: #4b4e55;
   --card-bg: #f6f4f0;
@@ -138,7 +138,7 @@ h3 {
   width: 140px;
   min-width: 120px; /* ou uma largura fixa menor */
   text-align: center;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.514);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.514);
   padding: 10px;
   background-color: var(--secondary);
   color: white;
@@ -241,7 +241,7 @@ span img {
 .flag img {
   height: 40px;
   width: 40px;
-  background: rgba(0, 0, 0, 0.404);
+  background: #0c0649d2;
   border-radius: 100%;
   padding: 2px;
 }
