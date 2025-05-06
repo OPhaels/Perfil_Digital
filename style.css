@@ -47,7 +47,7 @@ body::before {
   width: 100%;
   text-align: center;
   background-color: var(--card-bg);
-  padding: 25px;
+  padding: 20px;
   text-shadow: 0 0 1px black;
   margin: 0;
   border-radius: 16px;
@@ -120,9 +120,7 @@ h3 {
 
 .cta-buttons {
   border-top: 2px dashed rgba(0, 0, 0, 0.1);
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
   padding-top: 10px;
-  padding-bottom: 10px;
 }
 .social-links {
   margin-top: 10px;
