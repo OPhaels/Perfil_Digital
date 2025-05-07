@@ -135,6 +135,7 @@ h3 {
   min-width: 120px; /* ou uma largura fixa menor */
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.514);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.336);
   padding: 10px;
   background-color: var(--secondary);
   color: white;
@@ -233,7 +234,6 @@ span img {
   margin: 0 40px;
 }
 .flag {
-  border: 2px dashed;
   padding: 10px;
   text-align: center;
 }
@@ -248,7 +248,7 @@ span img {
 
 .percentage {
   display: block;
-  margin-top: 5px;
+  margin-top: 2px;
   font-size: 14px;
   font-weight: bold;
 }
