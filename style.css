@@ -59,7 +59,7 @@ body::before {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
 }
 
@@ -79,9 +79,10 @@ h2 {
 
 .bio {
   font-size: 16px;
+  text-align: center;
   width: 300px;
   max-width: 80%;
-  margin: 20px auto 10px auto;
+  margin: 20px auto 20px auto;
 }
 
 /* === SKILLS === */
@@ -105,6 +106,7 @@ h2 {
 
 h3 {
   font-weight: bold;
+  font-size: 20pt;
   color: var(--subtext);
 }
 
@@ -115,7 +117,12 @@ h3 {
   text-align: center;
   justify-content: center;
   flex-wrap: nowrap; /* <- evita quebra */
+  text-shadow: 0 0 6px black;
   gap: 5px;
+}
+
+h3 {
+  font-size: 15pt;
 }
 
 .cta-buttons {
@@ -134,9 +141,8 @@ h3 {
   width: 140px;
   min-width: 120px; /* ou uma largura fixa menor */
   text-align: center;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.514);
-  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.336);
-  padding: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.445);
+  padding: 10px 15px;
   background-color: var(--secondary);
   color: white;
   border-radius: 6px;
@@ -191,15 +197,20 @@ h3 {
 
 .boxe .nome {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20pt;
+  font-size: 30pt;
   font-family: "Trebuchet MS", sans-serif;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   text-shadow: 0 0 10px black;
+}
+
+.nomesi {
+  font-size: 10pt;
+  margin-top: -20px;
 }
 
 .boxe:hover .nome {
@@ -207,7 +218,7 @@ h3 {
 }
 
 .boxe:hover img {
-  filter: grayscale(10%);
+  filter: grayscale(20%);
   cursor: pointer;
 }
 
@@ -238,18 +249,18 @@ span img {
   text-align: center;
 }
 .flag img {
-  filter: drop-shadow(0 0 15px rgba(12, 219, 5, 0.712));
-  height: 40px;
-  width: 40px;
+  border: outset 4px rgba(0, 0, 0, 0.671);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.753);
+  height: 50px;
+  width: 50px;
   border-radius: 100%;
   background: rgba(14, 2, 46, 0.308);
-  padding: 2px;
 }
 
 .percentage {
   display: block;
   margin-top: 2px;
-  font-size: 14px;
+  font-size: 12pt;
   font-weight: bold;
 }
 
@@ -267,25 +278,21 @@ span img {
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
-  .boxe .nome {
-    font-size: 16pt;
-  }
-
   .skills .hb {
-    width: 250px;
+    width: 300px;
   }
 
   h1 {
-    font-size: 22pt;
+    font-size: 20pt;
     font-weight: bolder;
   }
 
-  h2 {
-    font-size: 15pt;
+  .cargo {
+    margin-top: -15px;
+    font-size: 14pt;
   }
 
   .skills span {
-    font-size: 12px;
     padding: 5px 0;
     margin: 5px;
   }
@@ -293,20 +300,20 @@ span img {
 
 @media (max-width: 600px) {
   .skills .hb {
-    width: 250px;
+    width: 280px;
   }
 
   .cta-buttons a,
   .social-links a {
-    padding: 8px;
+    padding: 10px;
     font-size: 13px;
     width: 120px;
     white-space: nowrap;
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   h1 {
@@ -361,6 +368,14 @@ span img {
 
   h1 {
     font-size: 20pt;
+  }
+  .percentage {
+    font-size: 10pt;
+  }
+
+  .nomesi {
+    font-size: 10px;
+    margin-top: -20px;
   }
 }
 
