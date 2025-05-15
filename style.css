@@ -1,9 +1,9 @@
 :root {
-  --primary: #0b2447;
-  --secondary: #132f61de;
-  --text: #19191f;
-  --subtext: #4b4e55;
-  --card-bg: #f6f4f0;
+  --primary: #102e50;
+  --secundary: #123458;
+  --subtext: #183b4e;
+  --text: #030303;
+  --forty: #f2f2f2;
 }
 
 /* === RESET E BASE === */
@@ -46,7 +46,7 @@ body::before {
   max-width: 600px;
   width: 100%;
   text-align: center;
-  background-color: var(--card-bg);
+  background-color: var(--forty);
   padding: 20px;
   text-shadow: 0 0 1px black;
   margin: 0;
@@ -64,15 +64,16 @@ body::before {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 28pt;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--primary);
+  color: var(--subtext);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.158);
 }
 
 h2 {
   font-size: 18px;
+  font-weight: bold;
   color: var(--subtext);
   margin: 15px 0;
 }
@@ -93,8 +94,7 @@ h2 {
 .skills .hb {
   width: 320px;
   display: inline-block;
-  background: var(--primary);
-  color: white;
+  background: var(--secundary);
   padding: 10px;
   border-radius: 10px;
   font-size: 14px;
@@ -123,6 +123,7 @@ h3 {
 
 h3 {
   font-size: 15pt;
+  font-weight: bold;
 }
 
 .cta-buttons {
@@ -142,8 +143,8 @@ h3 {
   min-width: 120px; /* ou uma largura fixa menor */
   text-align: center;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.445);
-  padding: 10px 15px;
-  background-color: var(--secondary);
+  padding: 15px;
+  background-color: var(--secundary);
   color: white;
   border-radius: 6px;
   font-weight: 500;
@@ -190,9 +191,9 @@ h3 {
   height: auto;
   filter: grayscale(100%);
   opacity: 0.7;
-  box-shadow: 0 0 2px black;
+  border: solid black 2px;
   transition: all 0.5s ease-in-out;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .boxe .nome {
@@ -210,7 +211,7 @@ h3 {
 
 .nomesi {
   font-size: 10pt;
-  margin-top: -20px;
+  text-align: center;
 }
 
 .boxe:hover .nome {
@@ -384,4 +385,10 @@ span img {
     padding: 5px;
     margin: 0;
   }
+}
+
+.bar p {
+  color: black;
+  text-shadow: none;
+  opacity: 70%;
 }
