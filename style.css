@@ -92,7 +92,7 @@ h2 {
 }
 
 .skills .hb {
-  width: 320px;
+  width: 305px;
   display: inline-block;
   background: var(--secundary);
   padding: 10px;
@@ -194,10 +194,10 @@ h3 {
 
 .boxe .nome {
   position: absolute;
-  top: 45%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
   font-size: 30pt;
   font-family: "Trebuchet MS", sans-serif;
   opacity: 0;
@@ -276,7 +276,7 @@ span img {
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
   .skills .hb {
-    width: 300px;
+    width: 250px;
   }
 
   h1 {
@@ -297,7 +297,7 @@ span img {
 
 @media (max-width: 600px) {
   .skills .hb {
-    width: 280px;
+    width: 270px;
   }
 
   .cta-buttons a,
@@ -328,6 +328,12 @@ span img {
     margin: auto;
   }
 
+  .flag img {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
   .boxe .nome {
     font-size: 12pt;
   }
@@ -335,10 +341,6 @@ span img {
   .cta-buttons a,
   .social-links a {
     padding: 10px;
-  }
-
-  span img {
-    padding: 0;
   }
 
   h3 {
@@ -352,10 +354,8 @@ span img {
 }
 
 @media (max-width: 410px) {
-  .hb img,
-  .idio img {
-    width: 24px;
-    height: 24px;
+  .skills .hb {
+    width: 255px;
   }
 
   .bar {
