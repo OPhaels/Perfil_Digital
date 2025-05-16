@@ -275,10 +275,6 @@ span img {
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
-  .skills .hb {
-    width: 250px;
-  }
-
   h1 {
     font-size: 20pt;
     font-weight: bolder;
