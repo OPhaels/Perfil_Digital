@@ -97,6 +97,21 @@
       </div>
 
     </div>
+    <script>
+      document.querySelectorAll('.cta-buttons a, .social-links a').forEach((button) => {
+        button.addEventListener('mouseenter', () => {
+          button.classList.remove('animate-out');
+          void button.offsetWidth; // força reinício da animação
+          button.classList.add('animate-hover');
+        });
+
+        button.addEventListener('mouseleave', () => {
+          button.classList.remove('animate-hover');
+          void button.offsetWidth;
+          button.classList.add('animate-out');
+        });
+      });
+    </script>
 
 </body>
 

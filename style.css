@@ -114,45 +114,77 @@ h3 {
 .cta-buttons,
 .social-links {
   display: flex;
-  text-align: center;
   justify-content: center;
-  flex-wrap: nowrap; /* <- evita quebra */
-  text-shadow: 0 0 6px black;
+  gap: 10px;
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   gap: 5px;
-}
-
-.cta-buttons {
-  border-top: 2px dashed rgba(0, 0, 0, 0.1);
-  padding-top: 10px;
-}
-.social-links {
-  margin-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap; /* NÃO quebra para baixo */
+  max-width: 100%;
 }
 
 .cta-buttons a,
 .social-links a {
-  display: inline-block;
-  gap: 10px;
-  width: 150px;
-  min-width: 120px; /* ou uma largura fixa menor */
+  position: relative;
+  flex: 1 1 45%; /* 2 por linha */
+  min-width: 120px;
+  max-width: 150px;
+  background-color: var(--primary);
   text-align: center;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.445);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.445);
   padding: 15px;
-  background-color: var(--secundary);
+  margin: 5px;
   color: white;
   border-radius: 6px;
-  font-weight: 500;
   font-family: sans-serif;
   font-size: 13px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
-.cta-buttons a:hover,
-.social-links a:hover {
-  background-color: #248c68;
+/* camada do GIF que aparece suavemente */
+.cta-buttons a::before,
+.social-links a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("agua.gif") center center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* texto visível acima da camada de fundo */
+.cta-buttons a,
+.social-links a {
+  z-index: 1;
+}
+
+/* efeito suave ao passar o mouse */
+.cta-buttons a:hover::before,
+.social-links a:hover::before {
+  opacity: 1;
+  animation: gifTransition 6s ease-in-out forwards;
+}
+
+/* transição entre água e praia */
+@keyframes gifTransition {
+  0% {
+    background-image: url("agua.gif");
+  }
+  50% {
+    background-image: url("praia.gif");
+  }
+  100% {
+    background-image: url("praia.gif");
+  }
 }
 
 /* === BARRA DE TÍTULO === */
