@@ -1,7 +1,7 @@
 :root {
-  --primary: #102e50;
-  --secundary: #123458;
-  --subtext: #183b4e;
+  --primary: #102c57;
+  --secundary: #124076;
+  --subtext: #4f709c;
   --text: #030303;
   --forty: #f2f2f2;
 }
@@ -23,6 +23,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  min-height: 100vh;
+  position: relative;
 }
 
 body::before {
@@ -37,7 +39,7 @@ body::before {
   background: radial-gradient(
     circle at center,
     transparent 80%,
-    rgba(0, 0, 0, 0.581) 100%
+    rgba(0, 0, 0, 0.58) 100%
   );
 }
 
@@ -45,18 +47,18 @@ body::before {
 .profile-container {
   max-width: 600px;
   width: 100%;
-  text-align: center;
   background-color: var(--forty);
   padding: 20px;
+  text-align: center;
   text-shadow: 0 0 1px black;
-  margin: 0;
   border-radius: 16px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -68,7 +70,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--subtext);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.158);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
 }
 
 h2 {
@@ -80,62 +82,57 @@ h2 {
 
 .bio {
   font-size: 16px;
-  text-align: center;
-  width: 300px;
   max-width: 80%;
-  margin: 20px auto 20px auto;
+  margin: 20px auto;
+  text-align: center;
 }
 
 /* === SKILLS === */
 .skills {
   margin: 20px 0;
+  text-align: center;
 }
 
 .skills .hb {
-  width: 305px;
-  display: inline-block;
-  background: var(--secundary);
+  width: 350px;
+  background: var(--primary);
   padding: 10px;
   border-radius: 10px;
   font-size: 14px;
+  display: inline-block;
 }
 
 .skills span {
-  margin: 10px;
+  margin: 5px;
+  display: inline-block;
 }
 
 h3 {
   font-weight: bold;
   font-size: 20pt;
   color: var(--subtext);
+  margin-bottom: 10px;
 }
 
 /* === CALL TO ACTION BUTTONS === */
-.cta-buttons,
-.social-links {
+.cta-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
-  max-width: 340px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: nowrap; /* NÃO quebra para baixo */
-  max-width: 100%;
+  flex-wrap: wrap;
+  max-width: 320px;
+  margin: 0 auto 20px;
 }
 
-.cta-buttons a,
-.social-links a {
+.cta-buttons a {
   position: relative;
-  flex: 1 1 45%; /* 2 por linha */
+  flex: 1 1 45%;
   min-width: 120px;
   max-width: 150px;
   background-color: var(--primary);
   text-align: center;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.445);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
   padding: 15px;
-  margin: 5px;
   color: white;
   border-radius: 6px;
   font-family: sans-serif;
@@ -143,11 +140,10 @@ h3 {
   text-decoration: none;
   overflow: hidden;
   transition: background-color 0.5s ease;
+  z-index: 1;
 }
 
-/* camada do GIF que aparece suavemente */
-.cta-buttons a::before,
-.social-links a::before {
+.cta-buttons a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -157,31 +153,20 @@ h3 {
   background: url("agua.gif") center center / cover no-repeat;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  z-index: 0;
   pointer-events: none;
+  z-index: 0;
 }
 
-/* texto visível acima da camada de fundo */
-.cta-buttons a,
-.social-links a {
-  z-index: 1;
-}
-
-/* efeito suave ao passar o mouse */
-.cta-buttons a:hover::before,
-.social-links a:hover::before {
+.cta-buttons a:hover::before {
   opacity: 1;
   animation: gifTransition 6s ease-in-out forwards;
 }
 
-/* transição entre água e praia */
 @keyframes gifTransition {
   0% {
     background-image: url("agua.gif");
   }
-  50% {
-    background-image: url("praia.gif");
-  }
+  50%,
   100% {
     background-image: url("praia.gif");
   }
@@ -195,7 +180,8 @@ h3 {
   text-shadow: 0 0 1px black;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px 0;
+  text-align: center;
 }
 
 /* === GALERIA DE IMAGENS === */
@@ -208,7 +194,7 @@ h3 {
 
 .boxe {
   position: relative;
-  margin: 0px 25px;
+  margin: 0 25px 20px;
   width: 80vw;
   max-width: 300px;
   overflow: hidden;
@@ -218,10 +204,10 @@ h3 {
   width: 100%;
   height: auto;
   filter: grayscale(100%);
-  opacity: 0.7;
-  border: solid black 2px;
-  transition: all 0.5s ease-in-out;
+  opacity: 0.6;
+  border: 2px groove black;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
 .boxe .nome {
@@ -235,20 +221,22 @@ h3 {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   text-shadow: 0 0 10px black;
+  pointer-events: none;
 }
 
 .nomesi {
   font-size: 10pt;
   text-align: center;
-}
-
-.boxe:hover .nome {
-  opacity: 1;
+  margin: 5px 0 0;
 }
 
 .boxe:hover img {
   filter: grayscale(20%);
   cursor: pointer;
+}
+
+.boxe:hover .nome {
+  opacity: 1;
 }
 
 /* === ÍCONES === */
@@ -257,7 +245,8 @@ span img {
   height: 40px;
   border-radius: 5px;
   filter: brightness(1) contrast(1)
-    drop-shadow(0 0 6px rgba(255, 255, 255, 0.123));
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.12));
+  transition: transform 0.3s ease;
 }
 
 .hb span {
@@ -270,46 +259,52 @@ span img {
   justify-content: space-around;
   align-items: center;
 }
+
 .box {
-  margin: 0 40px;
+  margin: 0 20px;
 }
+
 .flag {
   padding: 10px;
   text-align: center;
 }
+
 .flag img {
-  border: outset 2px rgba(0, 0, 0, 0.671);
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.753);
-  height: 50px;
   width: 50px;
-  border-radius: 100%;
-  background: rgba(14, 2, 46, 0.308);
+  height: 50px;
+  border-radius: 50%;
+  border: 2px outset rgba(0, 0, 0, 0.67);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  background: rgba(14, 2, 46, 0.31);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.flag img:hover {
+  transform: scale(1.1);
 }
 
 .percentage {
-  display: block;
-  margin-top: 2px;
   font-size: 12pt;
   font-weight: bold;
+  display: block;
 }
 
 .hb img {
   width: 30px;
   height: 30px;
-  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.253));
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25));
   transition: transform 0.3s ease;
 }
 
-.hb img:hover,
-.idio img:hover {
+.hb img:hover {
   transform: scale(1.1);
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
   h1 {
-    font-size: 20pt;
-    font-weight: bolder;
+    font-size: 24pt;
   }
 
   .cargo {
@@ -318,22 +313,17 @@ span img {
   }
 
   .skills span {
-    padding: 5px 0;
-    margin: 5px;
+    margin: 5px 8px;
   }
 }
 
 @media (max-width: 600px) {
   .skills .hb {
-    width: 270px;
+    width: 320px;
   }
 
-  .cta-buttons a,
-  .social-links a {
-    padding: 15px;
-    font-size: 13px;
-    width: 130px;
-    white-space: nowrap;
+  .cta-buttons {
+    max-width: 100%;
   }
 
   .profile-pic {
@@ -344,16 +334,17 @@ span img {
   h1 {
     font-size: 20pt;
   }
+
   .nomesi {
     font-size: 10pt;
-    margin: 0px 40px;
+    margin: 0 20px;
   }
 }
 
 @media (max-width: 500px) {
   .boxe {
     max-width: 60vw;
-    margin: auto;
+    margin: auto 0 20px;
   }
 
   .flag img {
@@ -366,9 +357,9 @@ span img {
     font-size: 12pt;
   }
 
-  .cta-buttons a,
-  .social-links a {
+  .cta-buttons a {
     padding: 10px;
+    font-size: 12px;
   }
 
   h3 {
@@ -383,7 +374,7 @@ span img {
 
 @media (max-width: 410px) {
   .skills .hb {
-    width: 255px;
+    width: 280px;
   }
 
   .bar {
@@ -398,14 +389,14 @@ span img {
   h1 {
     font-size: 20pt;
   }
+
   .percentage {
     font-size: 10pt;
   }
 
   .nomesi {
     font-size: 10px;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
   }
 }
 
@@ -427,5 +418,5 @@ span img {
 .bar p {
   color: black;
   text-shadow: none;
-  opacity: 70%;
+  opacity: 0.7;
 }
