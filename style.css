@@ -323,10 +323,6 @@ span img {
 }
 
 @media (max-width: 600px) {
-  .skills .hb {
-    width: 320px;
-  }
-
   .cta-buttons {
     max-width: 100%;
   }
@@ -379,7 +375,7 @@ span img {
 
 @media (max-width: 410px) {
   .skills .hb {
-    width: 280px;
+    width: 98%;
   }
 
   .bar {
@@ -410,6 +406,7 @@ span img {
     padding: 5px;
     margin: 0;
     width: 240px;
+    flex-wrap: nowrap;
   }
 
   .flag img {
