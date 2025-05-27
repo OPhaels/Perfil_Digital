@@ -1,5 +1,5 @@
 :root {
-  --primary: #102c57;
+  --primary: #0b2348;
   --secundary: #124076;
   --subtext: #4f709c;
   --text: #030303;
@@ -39,7 +39,7 @@ body::before {
   background: radial-gradient(
     circle at center,
     transparent 80%,
-    rgba(0, 0, 0, 0.58) 100%
+    rgba(0, 0, 0, 0.735) 100%
   );
 }
 
@@ -99,7 +99,7 @@ h2 {
 }
 
 .skills .hb {
-  width: 350px;
+  width: 310px;
   background: var(--primary);
   padding: 10px;
   border-radius: 10px;
@@ -275,10 +275,10 @@ span img {
 }
 
 .flag img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  border: 2px dashed rgba(7, 61, 211, 0.67);
+  border: 2px double rgba(0, 0, 0, 0.67);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
   background: rgba(14, 2, 46, 0.31);
   object-fit: cover;
