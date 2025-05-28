@@ -3,7 +3,7 @@
   --secundary: #124076;
   --subtext: #4f709c;
   --text: #030303;
-  --forty: #f2f2f2;
+  --forty: white;
 }
 
 /* === RESET E BASE === */
@@ -155,7 +155,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("agua.gif") center center / cover no-repeat;
+  background: url("praia.gif") center center / cover no-repeat;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
   pointer-events: none;
@@ -169,7 +169,7 @@ h3 {
 
 @keyframes gifTransition {
   0% {
-    background-image: url("agua.gif");
+    background-image: url("praia.gif");
   }
   50%,
   100% {
